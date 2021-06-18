@@ -6,7 +6,7 @@ public class StringStack implements Stack{
 	public StringStack() {}
 	
 	public StringStack(int size) {
-		
+		this.size = size;
 	}
 
 	@Override
@@ -27,8 +27,11 @@ public class StringStack implements Stack{
 
 	@Override
 	public boolean push(String val) {	// 스택에 제대로 들어가면 true
-		if (length() <= capacity())
+		if (length() <= capacity()) {
+			System.out.println("bbbbbbbbb");
+			
 			return true;
+		}
 		else
 			return false;
 	}

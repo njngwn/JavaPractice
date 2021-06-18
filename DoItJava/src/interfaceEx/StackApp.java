@@ -1,5 +1,7 @@
+
 package interfaceEx;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class StackApp {
 	public static void main(String[] args) {
@@ -7,26 +9,22 @@ public class StackApp {
 		System.out.print("총 스택 저장 공간의 크기 입력 >> ");
 		int size = scanner.nextInt();
 
-		StringStack sStack = new StringStack(size);
+		ArrayList <StringStack> arrStack = new ArrayList <StringStack>();
 		
 		while (true) {
 			System.out.print("문자열 입력 >> ");
 			String str = scanner.next();
 			
-			if (str == "그만") {
+			if (str.equals("그만")) {
+				System.out.println("aaaaaaaaaaa");
 				break;
 			}
 
-			if (sStack.push(str)) {
-				System.out.println("================");
-			}
-			else {
-				System.out.println("스택이 꽉 차서 푸시 불가");
-			}
-
+			arrStack.add(new StringStack());
+			
 		}
 		
-		System.out.println("스택에 저장된 모든 문자열 팝: " + sStack.pop());
+		System.out.println("스택에 저장된 모든 문자열 팝: " );
 		
 		scanner.close();
 	}
